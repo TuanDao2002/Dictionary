@@ -7,5 +7,18 @@ const render = (res) => {
         responseField.innerHTML = "<p>Try again!</p><p>There is no definition for this word</p>";
     }
 
-    responseField.innerHTML = `<p>Definition:</p></p><p>${res[0].meanings[0].definitions[0].definition}</p>`;
+    let wordDefinitions = [];
+    const len = res[0].meanings.length;
+
+    for (let i = 0; i < len; i++){
+        wordDefinitions.push(`<li>${res[0].meanings[i].definitions[0].definition}</li>`);
+    }
+
+    wordDefinitions = wordDefinitions.join("")
+    responseField.innerHTML = `<p>Definition:</p><ul>${wordDefinitions}</ul>`;
+    console.log(res[0].meanings);
+    console.log(res[1]);
+    console.log(res);
+    console.log(len);
 }
+

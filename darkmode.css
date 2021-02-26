@@ -118,3 +118,7 @@ li {
     text-align: center;
     color: whitesmoke;
 }
+
+li {
+    text-align: left;
+}
