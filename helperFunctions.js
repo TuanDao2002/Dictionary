@@ -16,9 +16,5 @@ const render = (res) => {
 
     wordDefinitions = wordDefinitions.join("")
     responseField.innerHTML = `<p>Definition:</p><ul>${wordDefinitions}</ul>`;
-    console.log(res[0].meanings);
-    console.log(res[1]);
-    console.log(res);
-    console.log(len);
 }
 
