@@ -11,7 +11,7 @@ const render = (res) => {
     const len = res[0].meanings.length;
 
     for (let i = 0; i < len; i++){
-        const partOfSpeech = res[0].meanings[i].definitions[0].partOfSpeech;
+        const partOfSpeech = res[0].meanings[i].partOfSpeech;
         const definition = res[0].meanings[i].definitions[0].definition;
         wordDefinitions.push(`<li>${partOfSpeech} -> ${definition}</li>`);
     }
