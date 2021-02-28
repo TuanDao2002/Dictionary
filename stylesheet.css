@@ -26,10 +26,6 @@ h1 {
     margin: 0;
 }
 
-li {
-    text-align: center;
-    margin: 0 25% 0 25%;
-}
 
 .logo {
     width: 110px;
@@ -138,9 +134,10 @@ li {
     color:rgb(236, 139, 139);
 }
 
-li {
-    float: left;
-    text-align: left;
+
+#element{
+    letter-spacing: 1px;
+    margin-right: 15px;
 }
 
 br {

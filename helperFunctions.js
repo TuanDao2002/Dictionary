@@ -18,7 +18,7 @@ const render = (res) => {
             const definitions = res[0].meanings[i].definitions;
             definitionsArray = []
             definitions.forEach(element => {
-                definitionsArray.push(`<p>--> ${element.definition}<p>`);
+                definitionsArray.push(`<p id="element">--> ${element.definition}<p>`);
             });
             definitionsArray = definitionsArray.join("")
             wordDefinitions.push(definitionsArray);
