@@ -10,7 +10,7 @@ header {
 
 main {
     background-color: black;
-    height: 900px;
+    height: 100%;
     text-align: center;
 }
 
@@ -77,7 +77,7 @@ li {
 
 #responseField {
     min-width: 191px;
-    min-height: 120px;
+    max-height: 275px;
     background-color: #1f233e;
     margin: auto;
     margin-top: 25px;
@@ -85,10 +85,10 @@ li {
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.2px;
-    text-align: center;
+    text-align: left;
     color: #ffffff;
     overflow-wrap: break-word;
-    padding: 20px;
+    overflow-y: scroll;
 }
 
 #submit:hover, #toggle:hover{
@@ -119,6 +119,35 @@ li {
     color: whitesmoke;
 }
 
+#def{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    align-content: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+    background-color: gray;
+    width: 100%;
+}
+
+#partOfSpeech{
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: rgba(245, 147, 245, 0.733)
+}
+
 li {
+    float: left;
     text-align: left;
+}
+
+br {
+    float: left;
+    text-align: left;
+}
+
+#warning{
+    text-align: center;
 }
