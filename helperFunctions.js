@@ -11,10 +11,13 @@ const render = (res) => {
     const len = res[0].meanings.length;
 
     for (let i = 0; i < len; i++){
-        wordDefinitions.push(`<li>${res[0].meanings[i].definitions[0].definition}</li>`);
+        const partOfSpeech = res[0].meanings[i].definitions[0].partOfSpeech;
+        const definition = res[0].meanings[i].definitions[0].definition;
+        wordDefinitions.push(`<li>${partOfSpeech} -> ${definition}</li>`);
     }
 
     wordDefinitions = wordDefinitions.join("")
     responseField.innerHTML = `<p>Definition:</p><ul>${wordDefinitions}</ul>`;
+    console.log(res);
 }
 
