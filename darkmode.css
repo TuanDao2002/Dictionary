@@ -116,6 +116,7 @@ h1 {
 }
 
 #def{
+    letter-spacing: 2px;
     text-align: center;
     font-size: 20px;
     font-weight: bold;
