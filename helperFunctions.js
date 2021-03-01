@@ -10,12 +10,13 @@ const render = (res) => {
         responseField.innerHTML = "<p id='warning'>Try again!</p><p id='warning'>You have not typed a word</p>";
     } else {
         let wordDefinitions = [];
-        const len = res[0].meanings.length;
-    
+        res.forEach(dictionaryArray => {
+            const len = dictionaryArray.meanings.length;
+        
         for (let i = 0; i < len; i++){
-            const partOfSpeech = res[0].meanings[i].partOfSpeech;
+            const partOfSpeech = dictionaryArray.meanings[i].partOfSpeech;
             wordDefinitions.push(`<p id="partOfSpeech">+ ${partOfSpeech}:</p>`);
-            const definitions = res[0].meanings[i].definitions;
+            const definitions = dictionaryArray.meanings[i].definitions;
             definitionsArray = []
             definitions.forEach(element => {
                 definitionsArray.push(`<p id="element">--> ${element.definition}<p>`);
@@ -23,10 +24,11 @@ const render = (res) => {
             definitionsArray = definitionsArray.join("")
             wordDefinitions.push(definitionsArray);
         }
+        })
+        
     
         wordDefinitions = wordDefinitions.join("")
         responseField.innerHTML = `<p id="def">Definition</p><ul>${wordDefinitions}</ul>`;
-    }
-    
+    }    
 }
 
