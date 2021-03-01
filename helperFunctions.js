@@ -25,8 +25,6 @@ const render = (res) => {
             wordDefinitions.push(definitionsArray);
         }
         })
-        
-    
         wordDefinitions = wordDefinitions.join("")
         responseField.innerHTML = `<p id="def">Definition</p><ul>${wordDefinitions}</ul>`;
     }    
