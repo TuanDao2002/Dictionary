@@ -61,6 +61,11 @@ h1 {
     color: white;
 }
 
+::placeholder{
+    color: whitesmoke;
+    opacity: 50%;
+}
+
 #submit {
     width: 125px;
     height: 30px;
