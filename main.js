@@ -24,7 +24,7 @@ const getDefinitions = () => {
 const display = (event) => {
     event.preventDefault();
     let child = responseField.lastElementChild;
-    while (child) {
+    while (child && child.id !== "def") {
         responseField.removeChild(child);
         child = responseField.lastElementChild;
     }
