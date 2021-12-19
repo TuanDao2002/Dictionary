@@ -14,6 +14,8 @@ const getDefinitions = () => {
     xhr.onreadystatechange = () => {
         if (xhr.readyState === XMLHttpRequest.DONE){
             render(xhr.response);
+        } else {
+            responseField.innerHTML = "waiting";
         }
     };
     xhr.open('GET', endpoint);
