@@ -15,7 +15,7 @@ const getDefinitions = () => {
         if (xhr.readyState === XMLHttpRequest.DONE){
             render(xhr.response);
         } else {
-            responseField.innerHTML = "waiting";
+            responseField.innerHTML += "<h3 style='text-align: center'>Loading...</h3>";
         }
     };
     xhr.open('GET', endpoint);
